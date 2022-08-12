@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hajjar-Developer </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Hajjar</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="index.html#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="index.html#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="index.html#services-section" class="nav-link"><span>Services</span></a></li>
+	          <li class="nav-item"><a href="index.html#skills-section" class="nav-link"><span>Skills</span></a></li>
+              <li class="nav-item"><a href="languages-section" class="nav-link"><span>Languages</span></a></li>
+              <li class="nav-item"><a href="index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="index.html#blog-section" class="nav-link"><span>My Blog</span></a></li>
+	          <li class="nav-item"><a href="index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
+            <h1 class="mb-3 bread">Blog Laravel CRUD</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="blog.html">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Crud <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate">
+                <h2 class="mb-3">Step 1: Installing Laravel 8</h2>
+                <p>You can install Laravel 8 using the following command. </p>
+                <p>composer create-project laravel/laravel --prefer-dist laravel8crud</p>
+                <p>
+                <img src="images/image100.PNG" alt="" class="img-fluid">
+                </p>
+                
+                <h2 class="mb-3 mt-5">Step 2: Configure the MySQL Database</h2>
+                <p>We will use a MySQL database to create a Database and return it to the project.</p>
+                <p>
+                <img src="images/image_4.jpg" alt="" class="img-fluid">
+                </p>
+                <p>Laravel provides the .env file to add credentials. Open the file and edit the following code.</p>
+                <p>DB_CONNECTION=mysql
+                 <br>   DB_HOST=127.0.0.1
+                 <br>  DB_PORT=3306
+                 <br>  DB_DATABASE=laravel8crud
+                 <br>  DB_USERNAME=root
+                 <br>  DB_PASSWORD=root</p>
+                <p>The username and password will be different for yours based on your database credentials.</p>
+                <p>Laravel comes with default migrations like users, password_resets, and create_failed_jobs table. Now go to the terminal and type the following command to run your migrations.</p>
+                <p>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>     php artisan migrate</p>
+                <p>You can see in your database that these tables are created, and those tables are empty.</p>
+            
+           
+           
+           
+                <h2 class="mb-3">Step 3: Create a model and custom migration</h2>
+                <p>We will create a project around Playstation 5 games.
+                     So users can create PS5 games, edit, and delete the games.
+                    So, let’s create a Game model and migration. </p>
+                <p>>>>>>>>>>>>>>>>>>>>>>>>>>>   php artisan make:model Game -m
+                </p>
+                <p>It will create two files.
+
+                    <br>    Game.php model
+                    <br>   create_games_table migration
+                    <br>    Add the new fields inside the create_games_table.php migration file.</p>
+                <p>
+                <img src="images/images2.PNG" alt="" class="img-fluid">
+                </p>
+                <p>The id and timestamp fields are created by Laravel by default.
+                    The name and price are custom fields that the user can add via the webforms.
+                    Finally, you can run the migration to create the table in the database.</p>
+                    <p> >>>>>>>>>>>>>>>>>>>>>>>>>>>   php artisan migrate</p>
+                <h2 class="mb-3 mt-5">Step 4: Create a Laravel 8 controller.</h2>
+                <p>Laravel resource routing assigns the typical “CRUD” routes to a controller with a single line of code. 
+                    Since our application is basic crud operations,
+                     we will use the Resource Controller for this small project.</p>
+                
+                    <p> >>>>>>>>>>>>>>>>      php artisan make:controller GameController --resource</p>
+                    <p>In a fresh install of Laravel 8, no namespace prefix is applied to the route groups that your routes are loaded into.</p>
+                <p>Here, you can open the App\Providers\RouteServiceProvider.php file and modify the following code inside the boot() method.</p>
+                <p>  <img src="images/image.png" alt="" class="img-fluid">
+                </p>
+                <p>That is it. Now it can find the controller. If your controller files are elsewhere, you have to assign the path in the namespace.</p>
+                <p>Note here that I have added the –resource flag, which will define six methods inside the GameController, namely:</p>
+                <p>1-Index: (The index() method is used for displaying a list of games).</p>
+                <p>2-Create: (The create() method will show the Form or view for creating a game).</p>
+                <p>3-Store: (The store() method is used for creating a game inside the database. Note: create method submits the form data to store() method).</p>
+                <p>4-Show: (The show() method will display a specified game).</p>
+                <p>5-Edit: (The edit() method will show the Form for editing a game. Form will be filled with the existing game data).</p>
+                <p>6-Update: (The update() method is used for updating a game inside the database. Note: edit() method submits the form data to update() method).</p>
+                <p>7-Destroy: (The destroy() method is used for deleting the specified game).</p>
+                <p>By default the GameController.php file is created inside the app >> Http >> controllers folder.</p>
+                <p>
+                    <img src="images/images4.PNG" alt="" class="img-fluid">
+                </p>
+                <p>
+                    <img src="images/images5.PNG" alt="" class="img-fluid">
+                </p>
+                <p>
+                    <img src="images/images6.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>You can see that the file contains CRUD operations in the Form of different functions. We will use these functions, one by one, to create crud operations.</p>
+                <p>The –resource flag will call the internal resource() method by Laravel to generate the following routes. You can check out the route list using the following command.</p>
+                <p> >>>>>>>>>>>>>>>>>  php artisan route: list</p>
+
+              
+                <h2 class="mb-3">Step 5: Define routes</h2>
+                <p>To define a route in Laravel, you need to add the route code inside the routes 
+                    <br> >>>>>>> web.php file. </p>
+                <p>// web.php
+                    <br>
+                Route::resource('games', 'GameController');</p>
+                <h2 class="mb-3 mt-5">Step 6: Configure Bootstrap in Laravel 8</h2>
+
+
+
+                <p>
+                    Laravel provides Bootstrap and Vue scaffolding located in the laravel/ui Composer package, which may be installed using Composer.
+                </p>
+
+                <p> >>>>>>>>>>>>>>>>>>>>> composer require laravel/ui</p>
+
+                <p>Once the laravel/ui package has been installed, you may install the frontend scaffolding using the ui Artisan command.</p>
+                <p> >>>>>>>>>>>>>>>>   php artisan ui bootstrap</p>
+                <p>Now, please run “npm install && npm run dev” to compile your fresh scaffolding.</p>
+             
+              <h2 class="mb-3 mt-5">Step 7: Create Views in Laravel 8</h2>
+              <p>Views contain the HTML served by your application and separate your controller/application logic from your presentation logic. Views are stored in the resources/views directory.</p>
+             <p> Inside the views directory, we also need to create a layout file. So, we will create the file inside the views directory called layout.blade.php. Add the following code in the layout.blade.php file.</p>
+              <p>
+                <img src="images/images7.PNG" alt="" class="img-fluid">
+              </p>
+
+              <p>Inside the resources >> views folder, create the following three-blade files.
+                <br>
+                <br>      create.blade.php
+                <br>      edit.blade.php
+                <br>       index.blade.php
+                <br>       Inside the create.blade.php file, write the following code.</p>
+                <p>
+                    <img src="images/images8.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>In this code, we have defined the action, which will call the store() method of the GameController’s method. Remember, we have used the resource controller.</p>
+                <p>Now, we need to return this create view from the create() method of GameController. So write the following code inside the GameController’s create() method.</p>
+                <p>
+                    <img src="images/images9.PNG" alt="" class="img-fluid">
+                </p>
+                
+                <p>Go to https://laravel8crud.test/games/create or http://localhost:8000, and you will see something like below.</p>
+                <p>
+                    <img src="images/images10.PNG" alt="" class="img-fluid">
+                </p>
+            
+               <h2 class="mb-3">Step 8: Add Validation rules and store the data.</h2>
+               <p>In this step, we will add a Laravel form Validation. 
+                <br> Now, add the GameController.php to import the namespace of the Game model inside the GameController.php file. </p>
+               <p>
+                 <img src="images/images11.PNG" alt="" class="img-fluid">
+               </p>
+               <p>Write the following code inside the GameController.php file’s store() function.</p>
+               
+               <p>
+                <img src="images/ images12.PNG" alt="" class="img-fluid">
+              </p>
+                <p>We use the $request->validate() method for validation, which receives an array of validation rules. The
+
+                    Validation rules[] is the associative array.
+                    <br> The key will be the field_name and value being the validation rules. The second parameter is an optional array for custom validation messages. Rules are separated with a pipe sign “|”. In this example, we are using the most basic validation rules.
+                    
+                    <br>  If the validation fails, it will redirect back to the form page with error messages. On the other hand, if the validation passes, it will create the new game and save it in the database.
+                    
+                    <br> In case of errors, we need to loop through those error messages inside the create.blade.php file, which we have already done it.
+                    
+                    <br>   If you leave all the form fields empty, you will find an error message like this image.</p>
+                <p>
+                    <img src="images/images13.PNG" alt="" class="img-fluid">
+                </p>
+
+                <p>We can see that we got the errors, but if we fill in all the correct data, you will still not save the data into the database because of the Mass Assignment Exception.</p>
+                    <p>To prevent the Mass Assignment Exception, we need to add a $fillable array inside the Game.php model.</p>      
+                    <p>
+                        <img src="images/images14.PNG" alt="" class="img-fluid">
+                    </p>
+
+                    <p>Now, if you fill the correct form fields, it creates a new row in the database.</p>
+                
+                
+      <h2 class="mb-3 mt-5">Step 9: Display the games</h2>
+               <p>To display the list of games, we need to write the HTML code inside the index.blade.php file. But before that, let’s write the index() function of the GameController.php file to get the array of data from the database.</p>
+             
+               <p>
+                 <img src="images/images15.PNG" alt="" class="img-fluid">
+               </p>
+
+
+               <p>Now, write the following code inside the index.blade.php file.</p>
+                <p><!-- index.blade.php --></p>
+               <p>
+                <img src="images/images16.PNG" alt="" class="img-fluid">
+              </p>
+
+            <p>We have added two edit and delete buttons to perform the respective operations.</p>
+              
+
+                            
+            <h2 class="mb-3 mt-5">Step 10: Complete Edit and Update</h2>
+            <p>To edit the data, we need the data from the database.
+                <br> Add the following code inside the GameController.php file’s edit function.</p>
+
+            <p>
+            <img src="images/images17.PNG" alt="" class="img-fluid">
+            </p>
+
+
+            <p>Now, create the new file inside the views folder called edit.blade.php and add the following code.</p>
+            <p><!-- index.blade.php --></p>
+            <p>
+            <img src="images/images18.PNG" alt="" class="img-fluid">
+            </p>
+
+            <p>Now go to the index page and then go to the edit page of a specific game, and you will see the Form with filled values.
+
+                Add the following code inside the GameController’s update() function.</p>
+
+                <p>
+                    <img src="images/images20.PNG" alt="" class="img-fluid">
+                </p>
+                
+                <p>Now you can update all the data into the database.
+                </p>
+                <h2 class="mb-3 mt-5">Step 11: Create Delete Functionality </h2>
+                <p>To remove data from the database, we will use GameController’s destroy() function.</p>
+            
+                <p>
+                <img src="images/images21.PNG" alt="" class="img-fluid">
+                </p>
+
+
+                <p>The delete() function is provided by Laravel to remove the data from the Database.
+
+                    The complete controller file is this.</p>
+                <p>
+                    <img src="images/images22.PNG" alt="" class="img-fluid">
+                </p>
+                <p>
+                    <img src="images/images23.PNG" alt="" class="img-fluid">
+                </p>
+                <p>
+                    <img src="images/images24.PNG" alt="" class="img-fluid">
+                </p>
+
+
+                <p>That is it. Now, you can create, read, update, and delete the data in Laravel.
+
+                    <br> If you are interested in the FrontEnd Javascript framework like Vue with Laravel or Angular with Laravel,
+                    check out the guides like Vue Laravel CRUD and Angular Laravel Tutorial Example.</p>
+
+                    
+          </div> <!-- .col-md-8 -->
+       
+        </div>
+      </div>
+    </section> <!-- .section -->
+		
+
+ 
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About</h2>
+              <p>A brief about my business and the necessary information to help you contact us.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://www.linkedin.com/in/hasan-hajjar-8236bb222"><span class="icon-linkedin"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/hasan.safwan.94"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://t.me/hasanshajjar"><span class="icon-telegram"> </span></a></li>
+				<li class="ftco-animate"><a href="https://t.me/Haffffffytsa"><span class="icon-telegram"></span></a></li>
+				<li class="ftco-animate"><a href="https://github.com/Hajjar-Developer"><span class="icon-github"></span></a></li>
+
+			</ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="#services-section"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+                <li><a href="#projects-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+			</ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Online Teacher</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Create nice portofilo</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Solve problems</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Remotly | Aleppo Syria | Dubai </span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+963 933912076</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">hasanhajjar@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This portfolio is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="#" target="_blank">Hajjar-Developer</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
